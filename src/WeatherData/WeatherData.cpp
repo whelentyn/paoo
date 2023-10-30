@@ -1,50 +1,40 @@
-#include <iostream>
-#include <vector>
+#include "WeatherData.h"
 #include <cstring>
 
-class WeatherData {
-    private:
-        double temperature;
-        double humidity;
-        double pressure;
-        char* description;
 
-    public:
-        //constructor
-        WeatherData(double temp, double hum, double press, const char* desc) :
-            temperature(temp), humidity(hum), pressure(press) {
-                //allocate memory for data description and copy the string
-                description = new char[strlen(desc) + 1];
-                strcpy(description, desc);
-            }
-
-        //copy constructor
-        WeatherData(const WeatherData &other) :
-            temperature(other.temperature), humidity(other.humidity), pressure(other.pressure) {
-                description = new char[strlen(other.description) + 1];
-                strcpy(description, other.description);
-            }
-
-        //destructor free dynamic memory
-        ~WeatherData() {
-            delete[] description;
-        }
-
-        double getTemperature() const {
-            return temperature;
-        }
+double WeatherData::getTemperature() {
+    return temperature;
+}
 
 
-        double getHumidity() const {
-            return humidity;
-        }
+double WeatherData::getHumidity() {
+    return humidity;
+}
 
-        double getPressure() const {
-            return pressure;
-        }
+double WeatherData::getPressure() {
+    return pressure;
+}
 
-        const char* getDescription() const {
-            return description;
-        }
+const char* WeatherData::getDescription() {
+    return description;
+}
 
-};
+void WeatherData::setTemperature(double newTemperature) {
+    temperature = newTemperature;
+}
+
+void WeatherData::setHumidity(double newHumidity) {
+    humidity = newHumidity;
+}
+
+void WeatherData::setPressure(double newPressure) {
+    pressure = newPressure;
+}
+
+void WeatherData::setDescription(const char* newDescription) {
+    if (description != nullptr) {
+        delete[] description; // Free the previous memory (if any)
+    }
+
+    description = new char[strlen(newDescription) + 1];
+}

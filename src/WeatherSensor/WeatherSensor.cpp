@@ -1,6 +1,6 @@
 #include "WeatherSensor.h"
 
-WeatherData WeatherSensor::readData() {
+WeatherData WeatherSensor::readData() const{
     //simulate some data that is ready
     double temp = 25.5;
     double hum = 60.0;
