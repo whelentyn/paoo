@@ -1,6 +1,12 @@
 #ifndef WEATHERDATA_H
 #define WEATHERDATA_H
 
+#include <iostream>
+#include <utility>
+#include <string.h>
+#include "../WeatherData/WeatherData.h"
+using namespace std;
+
 class WeatherData {
     private:
         double temperature;
@@ -13,12 +19,10 @@ class WeatherData {
         WeatherData(const WeatherData& other); //copy constructor
         ~WeatherData(); //destructor
 
-        double getTemperature() const;
-        double getHumidity() const;
-        double getPressure() const;
-        const char* getDescription() const;
-
-
+        double getTemperature();
+        double getHumidity();
+        double getPressure();
+        const char* getDescription();
 };
 
 #endif
