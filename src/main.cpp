@@ -17,6 +17,10 @@ int main() {
 
     WeatherData data1(30.0, 50.0, 1000.0, "Partly cloudy");
     WeatherData data2(28.5, 55.0, 998.5, "Sunny");
+
+
+    std::cout << "data1: Temperature " << data1.getTemperature() << "°C, Humidity " << data1.getHumidity() << "%, Pressure " << data1.getPressure() << "hPa, Description: " << data1.getDescription() << std::endl;
+    
     data1 = data2; //copy data from data2 to data1
 
     std::cout << "Updated data1: Temperature " << data1.getTemperature() << "°C, Humidity " << data1.getHumidity() << "%, Pressure " << data1.getPressure() << "hPa, Description: " << data1.getDescription() << std::endl;
