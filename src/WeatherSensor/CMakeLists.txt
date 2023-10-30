@@ -1,0 +1,3 @@
+add_library(WeatherSensor STATIC WeatherSensor.cpp)
+
+target_link_libraries(WeatherSensor PRIVATE WeatherData)

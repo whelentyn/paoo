@@ -1,0 +1,4 @@
+add_library(WeatherStation STATIC WeatherStation.cpp)
+
+target_link_libraries(WeatherStation PRIVATE WeatherSensor)
+target_link_libraries(WeatherStation PRIVATE WeatherData)
