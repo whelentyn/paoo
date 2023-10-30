@@ -37,6 +37,7 @@ void WeatherData::setDescription(const char* newDescription) {
     }
 
     description = new char[strlen(newDescription) + 1];
+    strcpy(description, newDescription);
 }
 
 WeatherData& WeatherData::operator=(const WeatherData& other) {
