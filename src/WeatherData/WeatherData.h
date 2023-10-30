@@ -45,6 +45,8 @@ class WeatherData {
         void setPressure(double pressure);
         void setDescription(const char* desc);
 
+        WeatherData& operator=(const WeatherData& other); // Assignment operator
+
 };
 
 #endif
