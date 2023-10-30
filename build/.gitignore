@@ -9,6 +9,9 @@ CPackSourceConfig.cmake
 CTestTestfile.cmake
 DartConfiguration.tcl
 Makefile
+WeatherData
+WeatherSensor
+WeatherStation
 
 # Compiled Object files
 **/.DS_Store

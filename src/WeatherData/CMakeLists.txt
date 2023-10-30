@@ -1,1 +1,1 @@
-add_library(WeatherData STATIC WeatherData.cpp)
+add_library(WeatherData WeatherData.cpp)
